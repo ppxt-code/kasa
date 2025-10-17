@@ -113,6 +113,35 @@ body .homeBody {
     gap: 57px;
 }
 
+/***** Logement *****/
+.carousel {
+    position: relative;
+    width: 100%;
+}
+.carouselImg {
+    width: 100%;
+}
+.carouselBtn {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    user-select: none;
+    z-index: 1;
+}
+.carouselBtn img {
+    width: 96px;
+    height: 119px;
+}
+.btnPrev {
+    left: 10px;
+}
+.btnNext {
+    right: 10px;
+}
+
+/***** media queries *****/
 @media (max-width: 768px) {
     .homeWrapper {
         padding-top: 20px;

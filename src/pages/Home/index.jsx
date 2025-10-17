@@ -1,16 +1,13 @@
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import img1 from '../../assets/img_src1.png'
-import React, { useState, useEffect } from 'react';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { LogementsContext } from '../../components/LogementProvider';
 
 function Home() {
-    const [logements, setLogements] = useState([]);
-    useEffect(() => {
-    fetch('/logements.json')
-      .then(response => response.json())
-      .then(data => setLogements(data))
-      .catch(error => console.error('Erreur lors du fetch :', error));
-    }, []);
+    const navigate = useNavigate();
+    const { logements } = useContext(LogementsContext);
     return (
       <div class="homeWrapper">
         <Header />
@@ -22,7 +19,8 @@ function Home() {
           </div>
           <div class="galleryWrapper">
             {logements.map((item, index) => (
-              <div key={index} className="imgGallery">
+              <div key={index} className="imgGallery"
+               onClick={() => navigate(`/logement/${item.id}`)}>
                 <img src={item.cover} alt={item.title} />
                 <div class="imgGalleryOverlay"></div>
                 <h2 class="imgGalleryTitle">{item.title}</h2>
