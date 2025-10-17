@@ -1,7 +1,12 @@
-import footerKasa from '../../assets/Footer_large.png'
+import footerKasaLarge from '../../assets/Footer_large.png'
+import footerKasaSmall from '../../assets/Footer_small.png'
+
 function Footer() {
     return (
-        <img class="footer" src={footerKasa} alt="footer kasa"/>
+        <picture>
+            <source media="(max-width: 768px)" srcSet={footerKasaSmall} />
+            <img class="footer" src={footerKasaLarge} alt="footer kasa"/> 
+        </picture>
     )
 }
 export default Footer

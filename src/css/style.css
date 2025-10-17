@@ -5,6 +5,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: Montserrat, sans-serif;
 }
 
 /***** Home *****/
@@ -18,8 +19,7 @@ body {
     gap: 50px;
 }
 .footer {
-    margin-left: -100px;
-    margin-right: -100px;
+    margin-left: -100px; margin-right: -100px;
     width: calc(100% + 200px);
 }
 body .homeBody {
@@ -28,9 +28,13 @@ body .homeBody {
     flex: 1;
     gap: 50px;
 }
+/* image of Home */
 .imgWrapper {
     position: relative;
     height: 223px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .imgOverlay {
     position: absolute;
@@ -47,16 +51,15 @@ body .homeBody {
 }
 .homeTitle { 
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
     color: white;
     font-size: 48px;
     font-weight: bold;
     z-index: 1;
     text-align: center;
-    width: 100%;
+    left:20px; right:20px;
+    box-sizing: border-box;
 }
-/*gallery :*/
+/* gallery */
 .galleryWrapper {
     display: flex;
     flex-wrap: wrap;
@@ -96,9 +99,7 @@ body .homeBody {
     font-size: 18px;
     font-weight: bold;
     z-index: 1;
-    width: 100%;
 }
-
 
 /***** Header *****/
 .headerWrapper {
@@ -108,7 +109,52 @@ body .homeBody {
 .linksWrapper {
     display: flex; 
     align-items:center;
-    font-family: Montserrat, sans-serif;
     font-size: 24px;
     gap: 57px;
 }
+
+@media (max-width: 768px) {
+    .homeWrapper {
+        padding-top: 20px;
+        padding-right: 20px; padding-left: 20px;
+        gap: 27px;
+    }
+    .footer {
+        margin-left: -20px; margin-right: -20px;
+        width: calc(100% + 40px);
+    }
+    body .homeBody {
+        gap: 20px;
+    }
+    /* image of Home */
+    .imgWrapper {
+        height: 111px;
+    }
+    .imgOverlay {
+        border-radius: 10px;
+    }
+    .homeImg {
+        border-radius: 10px;
+    }
+    .homeTitle { 
+        font-size: 24px;
+    }/* gallery */
+    .galleryWrapper {
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        padding: 0px;
+        gap: 20px;
+    }
+    .imgGallery {
+        width: 100%;
+        aspect-ratio: 1 / 1; /*height = width*/
+        position: relative;
+    }
+    .linksWrapper {
+        font-size: 12px;
+        gap: 30px;
+    }
+}
+
+
