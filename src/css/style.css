@@ -2,10 +2,11 @@
   color:black;
   background-color: white;
 }
-body {
+body, * {
   padding: 0;
   margin: 0;
   font-family: Montserrat, sans-serif;
+  font-weight: 500;
 }
 
 /***** Home *****/
@@ -114,12 +115,14 @@ body .homeBody {
 }
 
 /***** Logement *****/
+/* carousel */
 .carousel {
     position: relative;
     width: 100%;
 }
 .carouselImg {
     width: 100%;
+    border-radius: 25px; 
 }
 .carouselBtn {
     background-color: transparent;
@@ -130,6 +133,14 @@ body .homeBody {
     user-select: none;
     z-index: 1;
 }
+.carouselLabel {
+    position: absolute;
+    left:50%;
+    color: white;
+    bottom: 10%;
+    z-index:1;
+    font-size: 18px;
+}
 .carouselBtn img {
     width: 96px;
     height: 119px;
@@ -139,6 +150,82 @@ body .homeBody {
 }
 .btnNext {
     right: 10px;
+}
+/* logement description */
+.colorRed {
+    color : #FF6060;
+}
+.backgroundRed {
+    background-color : #FF6060;
+}
+.size18px {
+    font-size: 18px;
+}
+.size36px {
+    font-size: 36px;
+}
+.hostImg {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+}
+.logementBloc1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.logementBloc2 {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.logementBloc3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.logementBloc4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.hostRating {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.tag {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    color: white;
+    font-size: 14px;
+    height: 25px;
+    border-radius: 10px;
+}
+.ratingstar {
+    width: 36px;
+    height: 36px;
+}
+.details {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    gap:30px;
+}
+.detail {
+    border-radius: 5px;
+    height: 52px;
+    flex:1;
+    display: flex;
+    align-items:center;
+    padding-left: 15px;
 }
 
 /***** media queries *****/
@@ -167,7 +254,8 @@ body .homeBody {
     }
     .homeTitle { 
         font-size: 24px;
-    }/* gallery */
+    }
+    /* gallery */
     .galleryWrapper {
         display: flex;
         flex-direction: column;
@@ -183,6 +271,17 @@ body .homeBody {
     .linksWrapper {
         font-size: 12px;
         gap: 30px;
+    }
+    /* logement description */
+    .logementBloc1 {
+        flex-direction: column;
+    }
+    .hostRating {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .details {
+        flex-direction: column;
     }
 }
 
