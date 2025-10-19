@@ -1,0 +1,6 @@
+.detail {
+    &.detailHidden {display:none;}
+    button{
+        &:active {display:block;}
+    }
+}

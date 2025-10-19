@@ -7,6 +7,7 @@ import arrowBack from '../../assets/arrow_back.png'
 import arrowForward from '../../assets/arrow_forward.png'
 import starActive from '../../assets/star-active.png'
 import starInactive from '../../assets/star-inactive.png'
+import arrowUp from '../../assets/arrow_up.png'
 
 function Logement() {
     const { id } = useParams();
@@ -42,25 +43,40 @@ function Logement() {
           <div>
             <div class="logementBloc1">
               <div class="logementBloc2">
-                <h1 class="colorRed size36px">{logement.title}</h1>
-                <p class="size18px">{logement.location}</p>
+                <h1 class="logementTitle">{logement.title}</h1>
+                <p>{logement.location}</p>
                 <div class="logementBloc3"> 
                 {logement.tags.map(tag =>(
-                    <div class="tag backgroundRed">{tag}</div>
+                    <div class="tag">{tag}</div>
                 ))}
                 </div>
               </div>
               <div class="hostRating">
                 <div class="logementBloc4">
-                    <h2 class="colorRed size18px">{logement.host.name}</h2>
+                    <h2 class="hostTitle">{logement.host.name}</h2>
                     <img class="hostImg" src={logement.host.picture} alt={logement.host.name} />
                 </div>
                 <div class="logementBloc3">{stars}</div>
               </div>
             </div>
             <div class="details">
-                <div class="detail backgroundRed">Description</div>
-                <div class="detail backgroundRed">Equipements</div>
+                <div class="detail">
+                  <div class="detailTitle">
+                    <p>Description</p>
+                    <button class="detailArrow"><img src={arrowUp} alt="detail arrow"/></button>
+                  </div>
+                  <div class="detailContent detailHidden">{logement.description}</div>
+                </div>
+                <div class="detail">
+                  <div class="detailTitle">
+                    <p>Equipements</p>
+                    <button class="detailArrow"><img src={arrowUp} alt="detail arrow"/></button>
+                  </div>
+                  <div class="detailContent detailHidden">
+                    <ul class="detailList">
+                      {logement.equipments.map((equipement, i)=>(<li key={i}>{equipement}</li>))}
+                    </ul></div>
+                </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 :root {
   color:black;
   background-color: white;
+  --color-red : #FF6060;
 }
 body, * {
   padding: 0;
@@ -152,11 +153,12 @@ body .homeBody {
     right: 10px;
 }
 /* logement description */
-.colorRed {
-    color : #FF6060;
+.logementTitle {
+    color : var(--color-red);
+    font-size: 36px;
 }
 .backgroundRed {
-    background-color : #FF6060;
+    background-color : var(--color-red);
 }
 .size18px {
     font-size: 18px;
@@ -206,6 +208,7 @@ body .homeBody {
     font-size: 14px;
     height: 25px;
     border-radius: 10px;
+    background-color : var(--color-red);
 }
 .ratingstar {
     width: 36px;
@@ -217,15 +220,39 @@ body .homeBody {
     flex-direction: row;
     justify-content: space-between;
     color: white;
-    gap:30px;
+    gap:76px;
 }
 .detail {
-    border-radius: 5px;
-    height: 52px;
     flex:1;
     display: flex;
-    align-items:center;
+    flex-direction: column;
+}
+.detailTitle {
+    border-radius: 5px;
+    height: 52px;
+    font-size: 24px;
+    background-color : var(--color-red);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+.detailArrow {
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+.detailContent {
+    background-color : #F6F6F673;
+    padding: 24px;
+    color: black;
+}
+.detailList {
+    list-style-type: none;
 }
 
 /***** media queries *****/
