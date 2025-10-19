@@ -61,18 +61,18 @@ function Logement() {
             </div>
             <div class="details">
                 <div class="detail">
-                  <input type="checkbox" id="cbDescription" class="detailArrow" hidden />
+                  <input type="checkbox" id="cbDescription" hidden />
                   <div class="detailTitle">
                     <p>Description</p>
-                    <label for="cbDescription" class="detailArrowImg"><img src={arrowUp} alt="detail arrow"/></label>
+                    <label for="cbDescription" class="detailArrow"><img src={arrowUp} alt="detail arrow"/></label>
                   </div>
                   <div class="detailContent detailHidden">{logement.description}</div>
                 </div>
                 <div class="detail">
-                  <input type="checkbox" id="cbEquipments" class="detailArrow" hidden />
+                  <input type="checkbox" id="cbEquipments" hidden />
                   <div class="detailTitle">
                     <p>Equipements</p>
-                    <label for="cbEquipments" class="detailArrowImg"><img src={arrowUp} alt="detail arrow"/></label>
+                    <label for="cbEquipments" class="detailArrow"><img src={arrowUp} alt="detail arrow"/></label>
                   </div>
                   <div class="detailContent detailHidden">
                     <ul class="detailList">

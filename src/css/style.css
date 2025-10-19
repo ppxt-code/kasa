@@ -8,6 +8,7 @@ body, * {
   margin: 0;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
+  font-size: 18px;
 }
 
 /***** Home *****/
@@ -98,7 +99,6 @@ body .homeBody {
     left: 20px; right: 20px; max-width: calc(100% - 40px);      
     box-sizing: border-box;
     color: white;
-    font-size: 18px;
     font-weight: bold;
     z-index: 1;
 }
@@ -140,7 +140,6 @@ body .homeBody {
     color: white;
     bottom: 10%;
     z-index:1;
-    font-size: 18px;
 }
 .carouselBtn img {
     width: 96px;
@@ -164,7 +163,6 @@ body .homeBody {
 }
 .hostTitle {
     color : var(--color-red);
-    font-size: 18px;
 }
 .logementBloc1 {
     display: flex;
@@ -201,6 +199,7 @@ body .homeBody {
     padding: 0 30px;
     color: white;
     font-size: 14px;
+    font-weight: bold;
     height: 25px;
     border-radius: 10px;
     background-color : var(--color-red);
@@ -223,7 +222,7 @@ body .homeBody {
     flex-direction: column;
 }
 .detailTitle {
-    border-radius: 5px;
+    border-radius: 10px;
     height: 52px;
     font-size: 24px;
     background-color : var(--color-red);
@@ -235,13 +234,14 @@ body .homeBody {
     padding-right: 15px;
     box-sizing: border-box;
 }
+.detailTitle p {
+    font-weight: bold;
+}
 .detailArrow {
     background-color: transparent;
     border: none;
-    width: 32px;
-    height: 32px;
-}
-.detailArrowImg {
+    width: 24px;
+    height: 13px;
     display: flex;
     align-items:center;
     justify-content: center;
@@ -300,16 +300,66 @@ body .homeBody {
         font-size: 12px;
         gap: 30px;
     }
+    /* carousel */
+    .carouselBtn img {
+        width: 24px;
+        height: 24px;
+    }
     /* logement description */
+    .logementTitle {
+        font-size: 18px;
+    }
     .logementBloc1 {
         flex-direction: column;
     }
+    .logementBloc2 p {
+        font-size: 14px;
+    }
+    .logementBloc3 {
+        gap: 3px;
+    }
+    .tag {
+        height: 18px;
+        font-size: 10px;
+        border-radius: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .hostTitle {
+        font-size: 12px;
+    }
+    .hostImg {
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+    }
     .hostRating {
+        margin-top: 15px;
         flex-direction: row-reverse;
         justify-content: space-between;
+    }   
+    .ratingstar {
+        width: 18px;
+        height: 18px;
     }
     .details {
         flex-direction: column;
+        margin-top: 15px;
+        gap:20px;
+    }
+    .detailTitle {
+        border-radius: 5px;
+        height: 30px;
+        font-size: 13px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .detailArrow {
+        width: 16px;
+        height: 9px;
+    }
+    .detailContent, .detailContent li {
+        font-size: 12px;
     }
 }
 
