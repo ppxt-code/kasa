@@ -1,0 +1,19 @@
+.detail .detailHidden {
+  display: none;
+}
+.detail #cbDescription:checked ~ .detailContent {
+  display: block;
+}
+.detail #cbDescription:checked + .detailTitle label img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+.detail #cbEquipments:checked ~ .detailContent {
+  display: block;
+}
+.detail #cbEquipments:checked + .detailTitle label img {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+/*# sourceMappingURL=styles.css.map */

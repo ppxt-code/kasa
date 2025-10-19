@@ -1,0 +1,13 @@
+.detail {
+    .detailHidden {display:none;}
+    #cbDescription:checked ~ .detailContent { display: block; } 
+    #cbDescription:checked + .detailTitle label img {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+    #cbEquipments:checked ~ .detailContent { display: block; } 
+    #cbEquipments:checked + .detailTitle label img {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+    }
+}
