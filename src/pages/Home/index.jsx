@@ -14,7 +14,7 @@ function Home() {
         <div class="homeBody">
           <div class="imgWrapper">
             <img class="homeImg" src={img1} alt="la mer pres des cotes" />
-            <div class="imgOverlay"></div>
+            <div class="imgOverlay bgopacity60pct"></div>
             <h1 class="homeTitle">Chez vous, partout et ailleurs</h1>
           </div>
           <div class="galleryWrapper">

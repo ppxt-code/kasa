@@ -43,8 +43,13 @@ body .homeBody {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
+}
+.bgopacity60pct {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.bgopacity30pct {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 .homeImg {
     display: block;
@@ -222,7 +227,7 @@ body .homeBody {
     flex-direction: column;
 }
 .detailTitle {
-    border-radius: 10px;
+    border-radius: 5px;
     height: 52px;
     font-size: 24px;
     background-color : var(--color-red);
@@ -291,6 +296,8 @@ body .homeBody {
     flex-direction: column;
     color: white;
     gap:25px;
+    padding-left: 108px;
+    padding-right: 108px;
 }
 
 /***** media queries *****/
@@ -385,11 +392,10 @@ body .homeBody {
         gap:20px;
     }
     .detailTitle {
-        border-radius: 5px;
         height: 30px;
         font-size: 13px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .detailArrow {
         width: 16px;
@@ -411,6 +417,12 @@ body .homeBody {
     }
     .errorWrapper Link {
         font-size: 14px;
+    }
+
+    /***** A propos *****/
+    .apropos {
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
