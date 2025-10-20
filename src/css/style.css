@@ -251,6 +251,7 @@ body .homeBody {
     padding: 24px;
     color: black;
     border-radius: 5px;
+    text-align: left;
 }
 .detailList {
     list-style-type: none;
@@ -274,6 +275,22 @@ body .homeBody {
 .errorWrapper h2 {
     font-size: 36px;
     color: var(--color-red);
+}
+/***** A propos *****/
+.aproposWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    gap: 100px;
+    flex: 1;
+}
+.apropos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap:25px;
 }
 
 /***** media queries *****/

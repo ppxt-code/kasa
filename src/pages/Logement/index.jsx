@@ -60,25 +60,32 @@ function Logement() {
               </div>
             </div>
             <div class="details">
-                <div class="detail">
-                  <input type="checkbox" id="cbDescription" hidden />
-                  <div class="detailTitle">
-                    <p>Description</p>
-                    <label for="cbDescription" class="detailArrow"><img src={arrowUp} alt="detail arrow"/></label>
+              <div class="detail">
+                <input type="checkbox" class="detailToggle" />
+                <div class="detailTitle">
+                  <p>Description</p>
+                  <div class="detailArrow">
+                    <img src={arrowUp} alt="detail arrow" />
                   </div>
-                  <div class="detailContent detailHidden">{logement.description}</div>
                 </div>
-                <div class="detail">
-                  <input type="checkbox" id="cbEquipments" hidden />
-                  <div class="detailTitle">
-                    <p>Equipements</p>
-                    <label for="cbEquipments" class="detailArrow"><img src={arrowUp} alt="detail arrow"/></label>
+                <div class="detailContent">	
+                  {logement.description}
+                </div>
+              </div>
+              <div class="detail">
+                <input type="checkbox" class="detailToggle" />
+                <div class="detailTitle">
+                  <p>Equipements</p>
+                  <div class="detailArrow">
+                    <img src={arrowUp} alt="detail arrow" />
                   </div>
-                  <div class="detailContent detailHidden">
+                </div>
+                <div class="detailContent">	
                     <ul class="detailList">
                       {logement.equipments.map((equipement, i)=>(<li key={i}>{equipement}</li>))}
-                    </ul></div>
+                    </ul>
                 </div>
+              </div>
             </div>
           </div>
         </div>
