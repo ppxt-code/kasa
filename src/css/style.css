@@ -256,6 +256,26 @@ body .homeBody {
     list-style-type: none;
 }
 
+/***** Error *****/
+.errorWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 100px;
+    gap: 150px;
+    flex: 1;
+}
+.errorWrapper h1 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 288px;
+    font-weight: 700;
+    color: var(--color-red);
+}
+.errorWrapper h2 {
+    font-size: 36px;
+    color: var(--color-red);
+}
+
 /***** media queries *****/
 @media (max-width: 768px) {
     .homeWrapper {
@@ -360,6 +380,20 @@ body .homeBody {
     }
     .detailContent, .detailContent li {
         font-size: 12px;
+    }
+    /***** Error *****/
+    .errorWrapper {
+        padding-top: 75px;
+        gap: 100px;
+    }
+    .errorWrapper h1 {
+        font-size: 96px;
+    }
+    .errorWrapper h2 {
+        font-size: 18px;
+    }
+    .errorWrapper Link {
+        font-size: 14px;
     }
 }
 

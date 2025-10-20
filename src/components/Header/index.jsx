@@ -21,7 +21,7 @@ function Header() {
             </picture>
             <div class="linksWrapper">
                 <Link to="/">{isMobile ? 'ACCUEIL' : 'Accueil'}</Link>
-                <a href="#">{isMobile ? 'A PROPOS' : 'A propos'}</a>
+                <a href="/apropos">{isMobile ? 'A PROPOS' : 'A propos'}</a>
             </div> 
         </div>
     )
