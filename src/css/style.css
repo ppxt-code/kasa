@@ -138,6 +138,8 @@ body .kasaBody {
 .carouselImg {
     width: 100%;
     border-radius: 25px; 
+    height: 415px;
+    object-fit: cover;
 }
 .carouselBtn {
     background-color: transparent;
@@ -355,6 +357,9 @@ body .kasaBody {
         gap: 30px;
     }
     /* carousel */
+    .carouselImg {
+        height: 255px;
+    }
     .carouselBtn img {
         width: 24px;
         height: 24px;
