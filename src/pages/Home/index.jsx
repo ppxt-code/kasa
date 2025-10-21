@@ -9,21 +9,21 @@ function Home() {
     const navigate = useNavigate();
     const { logements } = useContext(LogementsContext);
     return (
-      <div class="kasaWrapper">
+      <div className="kasaWrapper">
         <Header />
-        <div class="kasaBody">
-          <div class="imgWrapper">
-            <img class="homeImg" src={img1} alt="la mer pres des cotes" />
-            <div class="imgOverlay bgopacity60pct"></div>
-            <h1 class="homeTitle">Chez vous, partout et ailleurs</h1>
+        <div className="kasaBody">
+          <div className="imgWrapper">
+            <img className="homeImg" src={img1} alt="la mer pres des cotes" />
+            <div className="imgOverlay bgopacity60pct"></div>
+            <h1 className="homeTitle">Chez vous, partout et ailleurs</h1>
           </div>
-          <div class="galleryWrapper">
+          <div className="galleryWrapper">
             {logements.map((item, index) => (
               <div key={index} className="imgGallery"
                onClick={() => navigate(`/logement/${item.id}`)}>
                 <img src={item.cover} alt={item.title} />
-                <div class="imgGalleryOverlay"></div>
-                <h2 class="imgGalleryTitle">{item.title}</h2>
+                <div className="imgGalleryOverlay"></div>
+                <h2 className="imgGalleryTitle">{item.title}</h2>
               </div>
             ))}
           </div>

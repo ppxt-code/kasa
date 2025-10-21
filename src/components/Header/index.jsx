@@ -26,12 +26,12 @@ function Header() {
     }, []);
 
     return (
-        <div class="headerWrapper">
+        <div className="headerWrapper">
             <picture>
                 <source media="(max-width: 768px)" srcSet={logoKasaSmall} />
                 <img src={logoKasaLarge} alt="logo kasa"/>  
             </picture>
-            <div class="linksWrapper">
+            <div className="linksWrapper">
                 <MyLink to="/">{isMobile ? 'ACCUEIL' : 'Accueil'}</MyLink>
                 <MyLink to="/apropos">{isMobile ? 'A PROPOS' : 'A propos'}</MyLink>
             </div> 
