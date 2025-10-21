@@ -61,8 +61,8 @@ function Logement() {
                 <h1 className="logementTitle">{logement.title}</h1>
                 <p>{logement.location}</p>
                 <div className="logementBloc3"> 
-                {logement.tags.map(tag =>(
-                    <div className="tag">{tag}</div>
+                {logement.tags.map((tag, index) =>(
+                    <div key={index} className="tag">{tag}</div>
                 ))}
                 </div>
               </div>
