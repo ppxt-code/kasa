@@ -22,6 +22,7 @@ function Logement() {
       </div>);
     } 
     const images = logement.pictures;
+    const hasButton = images.length > 1;
     // carousel
     const [currentIndex, setCurrentIndex] = useState(0);
     const next = () => {setCurrentIndex((currentIndex + 1) % images.length);};
@@ -37,16 +38,22 @@ function Logement() {
         <Header />
         <div class="kasaBody">
           <div class="carousel">
+            {hasButton &&(
             <button class="carouselBtn btnPrev" onClick={prev} aria-label="Précédent" >
               <img src={arrowBack} alt="fleche precedente" />
             </button>
+            )}
+            {hasButton && (
             <p class="carouselLabel">
               {currentIndex + 1}/{images.length}
             </p>
+            )}
             <img class="carouselImg" src={images[currentIndex]} alt={`${logement.title}`} />
+            {hasButton &&(
             <button class="carouselBtn btnNext" onClick={next} aria-label="Suivant" >
               <img src={arrowForward} alt="fleche suivante" />
             </button>
+            )}
           </div>
           <div>
             <div class="logementBloc1">
