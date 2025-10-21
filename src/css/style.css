@@ -295,8 +295,6 @@ body .kasaBody {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 100px;
-    gap: 100px;
     flex: 1;
 }
 .apropos {
