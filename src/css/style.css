@@ -216,6 +216,7 @@ body .kasaBody {
     font-weight: bold;
     height: 25px;
     border-radius: 10px;
+    white-space: nowrap;
     background-color : var(--color-red);
 }
 .ratingstar {
@@ -298,7 +299,7 @@ body .kasaBody {
     flex: 1;
 }
 .apropos {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     color: white;

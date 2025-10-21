@@ -13,6 +13,14 @@ function Logement() {
     const { id } = useParams();
     const { logements } = useContext(LogementsContext);
     const logement = logements.find(item => item.id === id);
+    if (!logement) {
+      return (
+      <div class="kasaWrapper">
+        <Header />
+        <h1>Pas de logement trouvé</h1>
+        <Footer />
+      </div>);
+    } 
     const images = logement.pictures;
     // carousel
     const [currentIndex, setCurrentIndex] = useState(0);
