@@ -1,16 +1,50 @@
-# React + Vite
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-css.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-react.svg)](https://forthebadge.com)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Application Web de Location Immobilière
 
-Currently, two official plugins are available:
+## Description
+Application web développée avec React JS pour la location immobilière.  
+Cette application permet de consulter des annonces de logements, visualiser les détails, et naviguer entre les pages via React Router.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fonctionnalités principales
+- Affichage de listes de logements avec cartes interactives 
+- Pages dynamiques pour chaque logement avec informations détaillées  
+- Composants modulaires et réutilisables (bannières, cartes, carrousels)  
+- Gestion des erreurs avec une page 404 personnalisée  
+- Responsive design optimisé pour desktop et mobile
 
-## React Compiler
+## Technologies utilisées
+- React JS (composants fonctionnels)  
+- React Router pour la navigation  
+- CSS avec Sass pour la gestion des styles  
+- Données JSON statiques pour les annonces 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation
+1. Cloner le dépôt :  
+- git clone https://github.com/ppxt-code/kasa.git
+- cd kasa
 
-## Expanding the ESLint configuration
+2. Installer les dépendances :  
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Lancer l'application en mode développement :  
+npm run dev
+
+## Structure du projet
+- `/src/components` : Composants React (Footer, Header, LogementProvider)  
+- `/src/pages` : Pages principales (Apropos, Error, Home,Logement) 
+- `/src/scss` : Fichiers Sass  
+- `/src/css` : Fichiers Css 
+- `/src/App.js` : Routeur principal  
+- `/public` : Données JSON   
+
+## Routes 
+- "/"                 redirige vers la page Home
+- "/apropos"          redirige vers la page Apropos
+- "/logement/id"      redirige vers la page du Logement indéxé par id
+- "/error" ou autre   redirige vers la page Error
+
+## Licence
+Ce projet est sous licence MIT.

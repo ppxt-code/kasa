@@ -277,8 +277,7 @@ body .kasaBody {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-top: 100px;
-    gap: 150px;
+    justify-content: space-around;
     flex: 1;
 }
 .errorWrapper h1 {
@@ -290,6 +289,9 @@ body .kasaBody {
 .errorWrapper h2 {
     font-size: 36px;
     color: var(--color-red);
+}
+.errorWrapper Link {
+    color: black;
 }
 /***** A propos *****/
 .aproposWrapper {
