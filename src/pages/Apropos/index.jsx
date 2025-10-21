@@ -5,7 +5,7 @@ import img2 from '../../assets/img_src2.png'
 
 function Apropos() {
     return (
-      <div class="homeWrapper">
+      <div class="kasaWrapper">
         <Header />
         <div class="aproposWrapper">
           <div class="imgWrapper">

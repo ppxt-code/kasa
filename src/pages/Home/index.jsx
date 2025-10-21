@@ -9,9 +9,9 @@ function Home() {
     const navigate = useNavigate();
     const { logements } = useContext(LogementsContext);
     return (
-      <div class="homeWrapper">
+      <div class="kasaWrapper">
         <Header />
-        <div class="homeBody">
+        <div class="kasaBody">
           <div class="imgWrapper">
             <img class="homeImg" src={img1} alt="la mer pres des cotes" />
             <div class="imgOverlay bgopacity60pct"></div>

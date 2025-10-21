@@ -25,9 +25,9 @@ function Logement() {
         stars.push(<img class="ratingstar" key={i} src={i<rating? starActive : starInactive} alt="rating star"/>);
 
     return (
-      <div class="homeWrapper">
+      <div class="kasaWrapper">
         <Header />
-        <div class="homeBody">
+        <div class="kasaBody">
           <div class="carousel">
             <button class="carouselBtn btnPrev" onClick={prev} aria-label="Précédent" >
               <img src={arrowBack} alt="fleche precedente" />

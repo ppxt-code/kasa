@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 function Error() {
     return (
-      <div class="homeWrapper">
+      <div class="kasaWrapper">
         <Header />
         <div class="errorWrapper">
             <h1>404</h1>
