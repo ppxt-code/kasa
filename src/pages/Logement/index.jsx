@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react'
 import { LogementsContext } from '../../components/LogementProvider'
+import Error from '../../pages/Error'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Gallery from '../../components/Gallery'
@@ -13,12 +14,7 @@ function Logement() {
     const { logements } = useContext(LogementsContext);
     const logement = logements.find(item => item.id === id);
     if (!logement) {
-      return (
-      <div className="kasaWrapper">
-        <Header />
-        <h1>Pas de logement trouvé</h1>
-        <Footer />
-      </div>);
+      return (<Error />);
     } 
     const images = logement.pictures;
     // rating

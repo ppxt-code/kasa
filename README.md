@@ -33,10 +33,9 @@ npm install
 npm run dev
 
 ## Structure du projet
-- `/src/components` : Composants React (Footer, Header, LogementProvider)  
+- `/src/components` : Composants React (Footer, Header, LogementProvider, Collapse, Gallery)  
 - `/src/pages` : Pages principales (Apropos, Error, Home,Logement) 
-- `/src/scss` : Fichiers Sass  
-- `/src/css` : Fichiers Css 
+- `/src/scss` : Fichiers Sass 
 - `/src/App.js` : Routeur principal  
 - `/public` : Données JSON   
 
@@ -45,6 +44,3 @@ npm run dev
 - "/apropos"          redirige vers la page Apropos
 - "/logement/id"      redirige vers la page du Logement indéxé par id
 - "/error" ou autre   redirige vers la page Error
-
-## Licence
-Ce projet est sous licence MIT.
