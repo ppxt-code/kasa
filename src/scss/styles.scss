@@ -1,20 +1,16 @@
   .detail {
     position: relative; 
     .detailToggle {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      z-index: 2; // Pour capter le clic
+        position: absolute;
+        inset: 0; // la checkbox invisible recouvre tout le parent
+        opacity: 0;
+        z-index: 2; // Pour capter le clic
     }
-    .detailTitle {
-      .detailArrow img { transition: transform 0.3s ease; }
+    .detailArrow img {
+        transition: transform 0.3s ease;
     }
-    .detailContent { display: none; }
-
-    /* --- L'effet toggle pur CSS --- */
-    .detailToggle:checked ~ .detailContent { display: block; }
-    .detailToggle:checked ~ .detailTitle .detailArrow img {
-      transform: rotate(180deg);
+    .detailArrow img.rotated {
+        transform: rotate(180deg);
     }
   }
 

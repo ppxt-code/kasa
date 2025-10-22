@@ -7,19 +7,10 @@
   opacity: 0;
   z-index: 2;
 }
-.detail .detailTitle .detailArrow img {
+.detail .detailArrow img {
   transition: transform 0.3s ease;
 }
-.detail .detailContent {
-  display: none;
-}
-.detail {
-  /* --- L'effet toggle pur CSS --- */
-}
-.detail .detailToggle:checked ~ .detailContent {
-  display: block;
-}
-.detail .detailToggle:checked ~ .detailTitle .detailArrow img {
+.detail .detailArrow img.rotated {
   transform: rotate(180deg);
 }
 
