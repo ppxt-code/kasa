@@ -4,9 +4,9 @@ import { LogementsContext } from '../../components/LogementProvider'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Gallery from '../../components/Gallery'
+import Collapse from '../../components/Collapse'
 import starActive from '../../assets/star-active.png'
 import starInactive from '../../assets/star-inactive.png'
-import arrowUp from '../../assets/arrow_up.png'
 
 function Logement() {
     const { id } = useParams();
@@ -52,32 +52,11 @@ function Logement() {
               </div>
             </div>
             <div className="details">
-              <div className="detail">
-                <input type="checkbox" className="detailToggle" />
-                <div className="detailTitle">
-                  <p>Description</p>
-                  <div className="detailArrow">
-                    <img src={arrowUp} alt="detail arrow" />
-                  </div>
-                </div>
-                <div className="detailContent">	
-                  {logement.description}
-                </div>
-              </div>
-              <div className="detail">
-                <input type="checkbox" className="detailToggle" />
-                <div className="detailTitle">
-                  <p>Equipements</p>
-                  <div className="detailArrow">
-                    <img src={arrowUp} alt="detail arrow" />
-                  </div>
-                </div>
-                <div className="detailContent">	
+              <Collapse title="Description" content={logement.description}/>
+              <Collapse title="Equipements" content={
                     <ul className="detailList">
                       {logement.equipments.map((equipement, i)=>(<li key={i}>{equipement}</li>))}
-                    </ul>
-                </div>
-              </div>
+                    </ul>}/>
             </div>
           </div>
         </div>
