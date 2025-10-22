@@ -33,7 +33,7 @@ npm install
 npm run dev
 
 ## Structure du projet
-- `/src/components` : Composants React (Footer, Header, LogementProvider, Collapse, Gallery)  
+- `/src/components` : Composants React (Footer, Header, Card, Collapse, SlideShow..)  
 - `/src/pages` : Pages principales (Apropos, Error, Home,Logement) 
 - `/src/scss` : Fichiers Sass 
 - `/src/App.js` : Routeur principal  

@@ -4,7 +4,7 @@ import { LogementsContext } from '../../components/LogementProvider'
 import Error from '../../pages/Error'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import Gallery from '../../components/Gallery'
+import SlideShow from '../../components/SlideShow'
 import Collapse from '../../components/Collapse'
 import starActive from '../../assets/star-active.png'
 import starInactive from '../../assets/star-inactive.png'
@@ -27,7 +27,7 @@ function Logement() {
       <div className="kasaWrapper">
         <Header />
         <div className="kasaBody">
-          <Gallery images={images} title={logement.title}/>
+          <SlideShow images={images} title={logement.title}/>
           <div>
             <div className="logementBloc1">
               <div className="logementBloc2">

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import arrowBack from '../../assets/arrow_back.png'
 import arrowForward from '../../assets/arrow_forward.png'
 
-function Gallery({images, title}) {
+function SlideShow({images, title}) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const hasButton = images.length > 1;
     const next = () => {setCurrentIndex((currentIndex + 1) % images.length);};
@@ -28,4 +28,4 @@ function Gallery({images, title}) {
                 )}
               </div>)
 }
-export default Gallery
+export default SlideShow
