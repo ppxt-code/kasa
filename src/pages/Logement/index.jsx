@@ -1,10 +1,9 @@
 import { useParams } from 'react-router-dom';
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { LogementsContext } from '../../components/LogementProvider'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import arrowBack from '../../assets/arrow_back.png'
-import arrowForward from '../../assets/arrow_forward.png'
+import Gallery from '../../components/Gallery'
 import starActive from '../../assets/star-active.png'
 import starInactive from '../../assets/star-inactive.png'
 import arrowUp from '../../assets/arrow_up.png'
@@ -22,11 +21,6 @@ function Logement() {
       </div>);
     } 
     const images = logement.pictures;
-    const hasButton = images.length > 1;
-    // carousel
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const next = () => {setCurrentIndex((currentIndex + 1) % images.length);};
-    const prev = () => {setCurrentIndex((currentIndex - 1 + images.length) % images.length);};
     // rating
     const rating = parseInt(logement.rating);
     const stars=[];
@@ -37,24 +31,7 @@ function Logement() {
       <div className="kasaWrapper">
         <Header />
         <div className="kasaBody">
-          <div className="carousel">
-            {hasButton &&(
-            <button className="carouselBtn btnPrev" onClick={prev} aria-label="Précédent" >
-              <img src={arrowBack} alt="fleche precedente" />
-            </button>
-            )}
-            {hasButton && (
-            <p className="carouselLabel">
-              {currentIndex + 1}/{images.length}
-            </p>
-            )}
-            <img className="carouselImg" src={images[currentIndex]} alt={`${logement.title}`} />
-            {hasButton &&(
-            <button className="carouselBtn btnNext" onClick={next} aria-label="Suivant" >
-              <img src={arrowForward} alt="fleche suivante" />
-            </button>
-            )}
-          </div>
+          <Gallery images={images} title={logement.title}/>
           <div>
             <div className="logementBloc1">
               <div className="logementBloc2">
