@@ -1,5 +1,5 @@
-import { useParams } from 'react-router-dom';
-import { useContext } from 'react'
+import { useParams, useNavigate } from 'react-router-dom';
+import { useContext, useEffect } from 'react'
 import { LogementsContext } from '../../components/LogementProvider'
 import Error from '../../pages/Error'
 import Header from '../../components/Header'
@@ -13,9 +13,15 @@ function Logement() {
     const { id } = useParams();
     const { logements } = useContext(LogementsContext);
     const logement = logements.find(item => item.id === id);
-    if (!logement) {
+    /*if (!logement) {
       return (<Error />);
-    } 
+    }*/
+    const navigate = useNavigate();
+    useEffect(() => {
+      if (!logement) { navigate("/erreur"); }
+    }, [logement, navigate]);
+    if (!logement) return null;  // ne rien rendre le temps de la redirection
+
     const images = logement.pictures;
     // rating
     const rating = parseInt(logement.rating);
