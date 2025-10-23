@@ -14,7 +14,9 @@ function Collapse({title, content}) {
                         </div>
                       </label>  
                     </div>
-                    {open && <div className="detailContent">{content}</div>}
+                    <div className={open ? "detailContentWrapper translated" : "detailContentWrapper"}>
+                      <div className={open ? "detailContent translated" : "detailContent"}>{content}</div>
+                    </div>
                   </div>)
 }
 export default Collapse

@@ -12,6 +12,23 @@
     .detailArrow img.rotated {
         transform: rotate(180deg);
     }
+    .detailContentWrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition:  max-height 0.3s ease;
+    }
+    .detailContentWrapper.translated {
+        max-height: 100vh;
+    }
+    .detailContentWrapper div{
+        transform: translateY(-100%);
+        overflow: hidden;
+        position: relative; z-index: -1;
+        transition:  transform 0.3s ease;
+    }
+    .detailContentWrapper div.translated {
+        transform: translateY(0);
+    }
   }
 
 :root {
