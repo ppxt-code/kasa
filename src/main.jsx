@@ -8,9 +8,10 @@ import "@fontsource/montserrat-alternates";
 import "@fontsource/montserrat-alternates/700.css"
 import App from './App.jsx'
 
+const basename = import.meta.env.PROD ? '/kasa' : '/'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <LogementProvider>
         <App />
       </LogementProvider>
